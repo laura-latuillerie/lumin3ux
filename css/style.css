@@ -1,0 +1,939 @@
+/**********************************
+CSS COMMUN
+**********************************/
+
+*{
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "gill-bold";
+    src: url(../assets/fonts/gill/gill-sans-nova-ultrabold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "gill-shadowed";
+    src: url(../assets/fonts/gill/gill-shadowed.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "muli";
+    src: url(../assets/fonts/muli/Muli-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: "muli";
+    text-align: center;
+    color: var(--color--off-black);
+    background-color: var(--color--off-white);
+}
+
+h1, h2, h4{
+    font-family: "gill-bold";
+    text-transform: uppercase;
+}
+
+h1{
+    font-size : 1.8rem;
+    word-wrap: normal;
+    animation: glitch1 2.5s infinite;
+}
+
+
+
+@keyframes glitch1 {
+    0% {
+      transform: none;
+      opacity: 1;
+    }
+    7% {
+      transform: skew(-0.5deg, -0.9deg);
+      opacity: 0.75;
+    }
+    10% {
+      transform: none;
+      opacity: 1;
+    }
+    27% {
+      transform: none;
+      opacity: 1;
+    }
+    30% {
+      transform: skew(0.8deg, -0.1deg);
+      opacity: 0.75;
+    }
+    35% {
+      transform: none;
+      opacity: 1;
+    }
+    52% {
+      transform: none;
+      opacity: 1;
+    }
+    55% {
+      transform: skew(-1deg, 0.2deg);
+      opacity: 0.75;
+    }
+    50% {
+      transform: none;
+      opacity: 1;
+    }
+    72% {
+      transform: none;
+      opacity: 1;
+    }
+    75% {
+      transform: skew(0.4deg, 1deg);
+      opacity: 0.75;
+    }
+    80% {
+      transform: none;
+      opacity: 1;
+    }
+    100% {
+      transform: none;
+      opacity: 1;
+    }
+  }
+
+h2{
+    font-size : 1.2rem;
+    margin : 0 0 20px 0;
+}
+
+h3{
+    display: block;
+    width: 200px;
+    margin:auto;
+    font-family: "gill-bold";
+    background-color: var(--color--second);
+    color: white;
+    margin-bottom: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+strong{
+    font-weight: 600;
+}
+
+.txt-rotate{
+    color : var(--color--second);
+}
+
+.wave{
+    width:50px;
+    margin-bottom : 30px;
+}
+
+.lead{
+    font-size : 1rem;
+}
+
+/**********************************
+CSS HEADER - NAV
+**********************************/
+
+nav{
+    text-align : left;
+    font-family: "muli";
+    text-transform: uppercase;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.709);
+}
+.navbar{
+    z-index: 100;
+    transition: background-color 1s ease 0s;
+}
+
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link{
+    color: var(--color--brique);
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: var(--color--second);
+}
+
+#navbar-logo, #navbar-logo-solid{
+    margin: 20px;
+}
+
+.dropdown-menu{
+    background-color: var(--color--off-white);
+    border:none;
+}
+
+.dropdown-item{
+    color: var(--color--brique);
+}
+
+.dropdown-item:hover{
+    background-color: var(--color--off-white);
+}
+
+.nav-item:hover{
+    border-bottom: 3px solid var(--color--brique);
+    color: var(--color--brique);
+}
+
+.navbar.solid {
+    background-color: var(--color--off-white);
+    transition: background-color 1s ease 0s;
+    box-shadow: 0 0 4px grey;
+}
+
+.dropdown-divider{
+    border-top: 1px solid var(--color--brique);
+}
+/*
+.alert{
+    text-align: center;
+    background-color: var(--color--second);
+    border: 1px white solid;
+    color: var(--color--off-white);
+    padding-bottom : 0;
+    white-space: nowrap;
+    overflow : hidden;    
+}
+
+.alert-text{
+ animation: scrollText 10s infinite linear;
+}
+@keyframes scrollText {
+    from   { transform: translateX(0%); }
+    to { transform: translateX(-50%); }
+  }
+*/
+.fixed-top{
+    display:none;
+}
+
+/**********************************
+CSS MAIN - CSS COMMUN DE BANDES
+**********************************/
+
+main{
+    background-color: var(--color--off-white);
+
+}
+
+/**********************************
+BANDE-VIDEO
+**********************************/
+
+.video-video{
+    padding: 0;
+}
+
+.video-container{
+    height : 600px;
+    z-index: 0;
+    position : relative;
+}
+
+#myVideo{
+    max-width: 100%;
+    height : 600px;
+    max-height : 100%;
+	background-size: 100% 100%;
+	background-color: #000;
+	background-position: center center;
+	background-size: contain;
+	object-fit: cover;
+    z-index: 2;
+}
+
+.overlay { 
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    height: 100%;
+    z-index :1;
+    padding : 10px;
+}
+
+.overlay-text{
+    font-size : 1.8rem;
+    text-shadow : 5px 5px 1px var(--color--brique);
+    color : white;
+}
+
+/**********************************
+BANDE-CONCEPT
+**********************************/
+
+.bande-concept{
+    margin-top : 100px;
+    margin-bottom : 40px;
+}
+
+.mob-info-concept{
+    width : 70%;
+    margin-left : auto;
+    margin-top : 40px;
+    margin-bottom : 30px;
+}
+
+.desk-info-concept{
+    display : none;
+}
+
+/**********************************
+BANDE-PROG
+**********************************/
+
+
+.as-fab-vert{
+    display : inline-block;
+    margin : 10px;
+    font-size : 1.5rem;
+    color : white;
+    border-radius: 50%;
+    background-color: var(--color--vert);
+    height: 60px;
+    width: 60px;
+    padding : 18px;
+}
+
+.as-fab-vert:hover{
+    color : var(--color--off-black);
+    background-color: var(--color--off-white);
+    border : 1px solid var(--color--vert);
+
+}
+
+.as-fab-bleu{
+    display : inline-block;
+    margin : 10px;
+    font-size : 1.5rem;
+    color : white;
+    border-radius: 50%;
+    background-color: var(--color--bleu);
+    height: 60px;
+    width: 60px;
+    padding : 18px;
+}
+
+.as-fab-bleu:hover{
+    color : var(--color--off-black);
+    background-color: var(--color--off-white);
+    border : 1px solid var(--color--bleu);
+}
+
+.as-fab-yellow{
+    display : inline-block;
+    margin : 10px;
+    font-size : 1.5rem;
+    color : white;
+    border-radius: 50%;
+    background-color: var(--color--yellow);
+    height: 60px;
+    width: 60px;
+    padding : 18px;
+}
+
+.as-fab-yellow:hover{
+    color : var(--color--off-black);
+    background-color: var(--color--off-white);
+    border : 1px solid var(--color--yellow);
+}
+
+.card-body{
+    padding-left : 0;
+    padding-right : 0;
+}
+
+
+/**********************************
+BANDE-PRESSE
+**********************************/
+
+.container-cards{
+    margin : auto;
+}
+
+.ccc{
+    margin-bottom : 40px;
+}
+
+.card{
+    background-color: transparent;
+    border : none;
+}
+
+.card-presse{
+    background-color: transparent;
+    border: 1px solid var(--color--second);
+    -webkit-box-shadow: 10px 10px 0px 1px var(--color--second); 
+    box-shadow: 10px 10px 0px 1px var(--color--second);
+}
+
+.card-presse:hover {
+    border-radius: 40px 40px 0px 40px;
+    -webkit-box-shadow: 0px 0px 0px 0px var(--color--second); 
+    box-shadow: 0px 0px 0px 0px var(--color--second); 
+}
+
+.brand-container{
+    height: 50px;
+    padding: 10px;
+    margin-bottom : 20px;
+
+}
+
+.brand{
+    max-height : 40px;
+    max-width: 100px;
+}
+
+
+/**********************************
+BANDE-AVIS
+**********************************/
+
+.main-container{
+    display:none;
+}
+
+.bande-mains{
+    padding : 0;
+    margin : auto;
+    
+}
+
+.photo-client{
+    width:200px;
+    margin: auto;
+}
+
+.carousel-inner{
+    margin:auto;
+}
+
+.fas{
+    font-size: 5rem;
+    letter-spacing: 2rem;
+    color: var(--color--second)
+}
+
+.fa-angle-right{
+    padding-left : 60px;
+}
+
+/**********************************
+BANDE-CARTE
+**********************************/
+
+iframe{
+    -webkit-box-shadow: 10px 10px 0px 1px var(--color--second); 
+    box-shadow: 10px 10px 0px 1px var(--color--second);
+}
+
+.map-legend{
+    background : transparent;
+    padding : 0px 20px 0px 20px;
+}
+
+.bande-carte{
+    margin-bottom : 20px;
+}
+
+/**********************************
+BANDE-SOCIALE
+**********************************/
+
+.bande-sociale{
+    margin-bottom : 70px;
+}
+
+.bouton-social{
+    border-radius: 50%;
+}
+
+.bs-fab{
+    margin-top : 20px;
+    display : inline-block;
+    border-radius: 50%;
+    background-color: var(--color--second);
+    color: white;
+    height: 80px;
+    width: 80px;
+    padding : 25px;
+    font-size: 2rem;
+}
+
+.fa-instagram{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.bs-fab:hover{
+    color : var(--color--brique);
+    background-color: transparent;
+    border : 1px var(--color--brique) solid;
+
+}
+
+/**********************************
+NEWSLETTER
+**********************************/
+
+.bande-newsletter{
+    height: 370px;
+    background: url("../assets/pics/light.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.bande-newsletter h1{
+    padding-top: 50px;
+    color : #fff;
+}
+.bande-newsletter h1{
+    font-size:2rem;
+}
+
+.newsletter-subscribe {
+    padding-top : 0;
+    padding-bottom : 40px;
+    margin-top : 0px;
+}
+
+.neon{
+    display: block;
+    position: relative;
+    -webkit-transform: translateZ(0) translate3D(0, 0, 0);
+            transform: translateZ(0) translate3D(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    will-change: opacity;
+    color: #ffF;
+    text-shadow: 0 0 0 transparent, 0 0 10px #ffca42, 0 0 20px rgba(255, 111, 0, 0.5), 0 0 40px #ffca42, 0 0 100px #ffca42, 0 0 200px #ffca42, 0 0 300px #ffca42, 0 0 500px #ffca42, 0 0 1000px #ffca42;
+    -webkit-animation: blink 4s infinite alternate;
+            animation: blink 4s infinite alternate;
+  
+  }
+
+  @-webkit-keyframes blink {
+    40% {
+      opacity: 1;
+    }
+    42% {
+      opacity: 0.8;
+    }
+    43% {
+      opacity: 1;
+    }
+    45% {
+      opacity: 0.2;
+    }
+    46% {
+      opacity: 1;
+    }
+  }
+  @keyframes blink {
+    40% {
+      opacity: 1;
+    }
+    42% {
+      opacity: 0.8;
+    }
+    43% {
+      opacity: 1;
+    }
+    45% {
+      opacity: 0.2;
+    }
+    46% {
+      opacity: 1;
+    }
+}
+
+.newsletter-subscribe {
+    color: #313437;
+    padding-top : 20px;
+}
+
+.newsletter-subscribe p {
+    color: #7d8285;
+    line-height: 1.5
+}
+
+.newsletter-subscribe form {
+    justify-content: center
+}
+
+.newsletter-subscribe form .form-control {
+    background: #eff1f4;
+    border: none;
+    border-radius: 3px;
+    box-shadow: none;
+    outline: none;
+    color: inherit;
+    text-indent: 9px;
+    height: 45px;
+    margin-right: 10px;
+    min-width: 250px
+}
+
+.newsletter-subscribe form .btn {
+    padding: 16px 32px;
+    border: none;
+    background: none;
+    box-shadow: none;
+    text-shadow: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    line-height: 1;
+    font-size: 1rem;
+    font-family: "muli";
+    margin-top: 10px;
+}
+
+.newsletter-subscribe form .btn:active {
+    transform: translateY(1px)
+}
+
+.newsletter-subscribe form .btn-primary {
+    background-color: var(--color--brique);
+    border: 0px solid transparent;
+    border-radius: 40px;
+    color: #fff;
+    outline: none !important;
+}
+
+.newsletter-subscribe form .btn-primary:hover {
+    background-color: var(--color--second);
+}
+
+/* RGPD */
+
+#popup-rgpd{
+    display: none;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    min-height: 20px;
+    background-color: var(--color--off-white);
+    z-index: 100;
+    bottom : 0;
+    border-radius: 5px;
+    padding : 10px;
+    
+}
+#popup-rgpd.open{
+    display: block;
+}
+
+.accept, .savoir-plus-cookies{
+    display : inline-block;
+    background-color: var(--color--brique);
+    border-radius: 5px;
+    margin : 10px 10px 10px 5px;
+    padding : 10px;
+    color : white;
+    text-decoration : none;
+}
+
+.accept:hover, .savoir-plus-cookies:hover{
+    color : white;
+    cursor : pointer;
+}
+
+/**********************************
+PAGE A PROPOS /// BANDE-CONCEPT
+**********************************/
+
+.img-expo{
+    max-width: 90%;
+    margin : 40px auto 20px auto;
+    border : 1px solid var(--color--brique);
+    -webkit-box-shadow: 10px 10px 0px 1px var(--color--second); 
+    box-shadow: 10px 10px 0px 1px var(--color--second);
+}
+
+table{
+    margin: 20px auto 20px auto;
+}
+
+.trio-name{
+    font-size : 1.2rem;
+}
+
+.lines{
+    color : var(--color--brique);
+    margin: 10px 0px 30px 0px;
+}
+
+.number{
+    font-size: 5rem;
+    color : var(--color--brique);
+}
+
+.fa-user-astronaut, .fa-smile, .fa-hand-holding-heart, .fa-leaf{
+    font-size : 3rem;
+    padding-left : 30px;
+}
+
+/**********************************
+PAGE A PROPOS /// BANDE-EQUIPE-MOB
+**********************************/
+
+.photo-equipe{
+    max-width : 70%;
+    margin : auto;
+}
+
+.bande-equipe-web{
+    display : none;
+}
+
+
+/**********************************
+PAGE A PROPOS /// BANDE-ARTICLES
+**********************************/
+
+.img-articles-press{
+    height : auto;
+    max-width: 100%;
+    border : 1px solid var(--color--brique);
+    -webkit-box-shadow: 10px 10px 0px 1px var(--color--second); 
+    box-shadow: 10px 10px 0px 1px var(--color--second);
+}
+
+.text-on-card{
+    color : var(--color--brique);
+}
+
+/**********************************
+PAGE PROGRAMMATION /// BANDE-EN COURS
+**********************************/
+
+.bande-programmation-en-cours{
+    margin-top : 40px;
+}
+
+/**********************************
+PAGE LUMIN-PASS /// BANDE-LUMIN-PASS
+**********************************/
+
+.img-lumin-pass{
+    margin : 80px auto 50px auto;
+    max-width: 100%;
+}
+
+/**********************************
+PAGE LEGALE
+**********************************/
+
+.bande-mentions-legales{
+    margin-top : 150px;
+}
+
+.cgv>a{
+    color : black;
+}
+
+
+/**********************************
+CSS FOOTER
+**********************************/
+
+.separateur{
+    max-width: 100%;
+    margin : auto;
+    opacity : 0.2;
+}
+
+footer{
+    padding: 20px;
+    background: var(--color--second);
+    background: linear-gradient(0deg, var(--color--second) 0%, rgba(255,255,255,0) 100%);
+    color: var(--color--off-black);
+    margin-top : 0;
+    }
+
+footer a{
+    color: var(--color--off-black);
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: var(--color--off-black);
+}
+
+.wave-footer{
+    margin-top:10px;
+    width:50px;
+    margin-bottom :20px;
+}
+
+#paris-logo{
+    width : 50%;
+}
+
+#lumin3ux-logo{
+    display: block;
+    width: 50%;
+    margin: 20px auto 20px auto;
+}
+
+/**********************************
+MEDIA RESP
+**********************************/
+
+@media screen and (min-width:768px){
+
+    h1{
+        font-size : 3.5rem;
+    } 
+
+    h2{
+        font-size : 2rem;
+    }
+
+    .nav-solid{
+        display:none;
+    }
+
+    .fixed-top{
+        display: flex;
+    }
+
+    .video-container{
+        width : 100%;
+        height : 50%;
+        z-index: 0;
+    }
+    
+    #myVideo{
+        width : 100%;
+        height : 100%;
+    }
+
+    .overlay-text{
+        margin-top : 100px;
+        font-size : 4rem;
+    }
+
+    .mob-info-concept{
+        display : none;
+    }
+    
+    .desk-info-concept{
+        display : block;
+        width : 90%;
+        margin : 50px auto 50px auto;
+    }
+
+    .as-fab-vert, .as-fab-yellow, .as-fab-bleu{
+        margin-left : 0;
+        margin-right : 0;
+    }
+
+
+    .bande-avis{
+        padding : 0
+    }
+
+    .main-container{
+        display: unset;
+    }
+
+    #main-g, #main-d{
+        width: 100%;
+    }
+    
+    .bande-mains, .bande-mains>div{
+        padding:0;
+        margin:0;
+    }
+
+    footer{
+        margin-top : unset;
+    }
+
+    .bs-fab-ig{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .bande-newsletter{
+        height : 300px;
+    }
+
+    .newsletter-subscribe form .btn {
+        margin-top: 0;
+    }
+
+
+    .map-legend{
+        height : 400px;
+        padding : 10px 0px 0px 0px;
+    }
+
+    .card-presse{
+        -webkit-transform: scale(0.9);
+        transform: scale(1);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+    }
+    
+    .card-presse:hover {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+
+    .separateur{
+        margin : 50px auto 50px auto;
+        max-height : 50px;
+        width : 700px;
+    }
+
+    .img-expo{
+        margin-top : 150px;
+    }
+
+    .fa-user-astronaut, .fa-smile, .fa-hand-holding-heart, .fa-leaf{
+        font-size : 5rem;
+        margin-bottom : 30px;
+    }
+
+    .bande-equipe-mob{
+        display : none;
+    }
+
+    .bande-equipe-web{
+        display : block;
+    }
+
+    .photo-equipe{
+        max-width: 40%;
+    }
+
+    .bande-programmation-en-cours{
+        margin-top : 200px;
+    }
+
+    .bande-prog{
+        margin-top : 100px;
+    }
+}
+
