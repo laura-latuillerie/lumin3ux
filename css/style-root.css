@@ -105,7 +105,7 @@ SMALL POP UP TEXT
 }
 
 /**********************************
-LIQUID BUTTON
+BUTTONS
 **********************************/
 
 .sin-liquid-a {
@@ -123,6 +123,24 @@ LIQUID BUTTON
   border-radius: 40px;
   color : var(--color--brique);
   border : 1px solid var(--color--brique);
+
+}
+
+.sin-liquid-b {
+  position: relative;
+  padding: 10px 20px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 200px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:30px;
+  margin-bottom : 20px;
+  overflow: hidden;
+  border-radius: 40px;
+  color : white;
+  border : 1px solid white;
 
 }
 
@@ -288,99 +306,6 @@ LIQUID BUTTON - YELLOW
   100% {
     transform: translate(-50%, -75%) rotate(360deg);
   }
-}
-
-
-/**********************************
-EFFET CSS RADIAL OUT
-**********************************/
-
-.hvr-radial-out {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(223, 192, 192, 0);
-  position: relative;
-  overflow: hidden;
-  background: var(--color--off-white);
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-}
-.hvr-radial-out:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--color--off-white);
-  border-radius: 100%;
-  -webkit-transform: scale(0);
-  transform: scale(0);
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-}
-.hvr-radial-out:hover, .hvr-radial-out:focus, .hvr-radial-out:active {
-  color: var(--color--brique);
-}
-.hvr-radial-out:hover:before, .hvr-radial-out:focus:before, .hvr-radial-out:active:before {
-  -webkit-transform: scale(2);
-  transform: scale(2);
-}
-
-/**********************************
-EFFET CSS RIPPLE IN
-**********************************/
-
-
-@-webkit-keyframes hvr-ripple-in {
-  100% {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 1;
-  }
-}
-@keyframes hvr-ripple-in {
-  100% {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 1;
-  }
-}
-.hvr-ripple-in {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  position: relative;
-}
-.hvr-ripple-in:before {
-  content: '';
-  position: absolute;
-  border: #e1e1e1 solid 4px;
-  top: -12px;
-  right: -12px;
-  bottom: -12px;
-  left: -12px;
-  opacity: 0;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-}
-.hvr-ripple-in:hover:before, .hvr-ripple-in:focus:before, .hvr-ripple-in:active:before {
-   animation-name: hvr-ripple-in;
 }
 
 /**********************************
