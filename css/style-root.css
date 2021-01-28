@@ -279,7 +279,7 @@ EFFET CSS RADIAL OUT
 EFFET CSS RIPPLE IN
 **********************************/
 
-/* Ripple In */
+
 @-webkit-keyframes hvr-ripple-in {
   100% {
     top: 0;
@@ -413,7 +413,7 @@ ICON-UP
 
 .fa-plus{
   color :var(--color--off-black);
-  font-size : 1rem;
+  font-size : 0.8rem;
   letter-spacing : 0;
 }
 
