@@ -515,6 +515,46 @@ GLITCH
 }
 
 /**********************************
+BLINK
+**********************************/
+
+@-webkit-keyframes blink {
+  40% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 0.8;
+  }
+  43% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0.2;
+  }
+  46% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  40% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 0.8;
+  }
+  43% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0.2;
+  }
+  46% {
+    opacity: 1;
+  }
+}
+
+
+/**********************************
 MEDIA QUERIES ROOT
 **********************************/
 
@@ -547,3 +587,5 @@ MEDIA QUERIES ROOT
     font-size: 2rem;
   }
 }
+
+

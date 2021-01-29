@@ -30,7 +30,6 @@ CSS COMMUN
 @font-face {
     font-family: "muli-black";
     src: url(../assets/fonts/muli/Muli-Black.ttf);
-    font-style: bold;  
 }
 
 body{
@@ -163,7 +162,6 @@ CSS MAIN - CSS COMMUN DE BANDES
 
 main{
     background-color: var(--color--off-white);
-
 }
 
 /**********************************
@@ -383,6 +381,7 @@ BANDE-CARTE
 iframe{
     -webkit-box-shadow: 10px 10px 0px 1px var(--color--second); 
     box-shadow: 10px 10px 0px 1px var(--color--second);
+    border: none;
 }
 
 .map-legend{
@@ -427,7 +426,6 @@ BANDE-SOCIALE
     color : var(--color--brique);
     background-color: transparent;
     border : 1px var(--color--brique) solid;
-
 }
 
 /**********************************
@@ -471,41 +469,6 @@ NEWSLETTER
             animation: blink 4s infinite alternate;
   
   }
-
-  @-webkit-keyframes blink {
-    40% {
-      opacity: 1;
-    }
-    42% {
-      opacity: 0.8;
-    }
-    43% {
-      opacity: 1;
-    }
-    45% {
-      opacity: 0.2;
-    }
-    46% {
-      opacity: 1;
-    }
-  }
-  @keyframes blink {
-    40% {
-      opacity: 1;
-    }
-    42% {
-      opacity: 0.8;
-    }
-    43% {
-      opacity: 1;
-    }
-    45% {
-      opacity: 0.2;
-    }
-    46% {
-      opacity: 1;
-    }
-}
 
 .newsletter-subscribe {
     color: #313437;
@@ -717,6 +680,9 @@ PAGE A PROPOS /// BANDE-EQUIPE
     display : none;
 }
 
+.card-text{
+    padding : 20px;
+}
 
 /**********************************
 PAGE A PROPOS /// BANDE-ARTICLES
@@ -811,7 +777,7 @@ input{
 PAGE INFOS
 ***********************************/
 
-.bande-services, .infos-bande-carte, .bande-contact, .bande-faq{
+.bande-contact, .bande-faq{
     margin-bottom : 100px;
 }
 

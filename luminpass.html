@@ -178,12 +178,8 @@
 
     <section class="container bande-luminpass">
       <img src="assets/pics/luminPass.png" alt="photo-lumin-pass" class="img-lumin-pass">
-      <h1>
-        <ul>
-          <li>Le LuminPass</li>
-          <li>carte de fidélité</li>
-        </ul>
-      </h1>
+      <h1>Le LuminPass</h1>
+      
       <img class="wave" alt="Séparateur Vague" src="assets/pics/squiggle.png">
       <h2>Qu'est ce que le luminpass ?</h2>
       <ul class="luminpass-description">
@@ -274,9 +270,10 @@
         </div>
         <div class="form-group">
           <label for="validationServer06">Offre</label>
-          <select class="form-control" id="validationServer06" style='padding:0' required>
-            <option>Pass Mensuel (4,99€)</option>
-            <option>Pass Annuel (19,99€)</option>
+          <select name="offre" class="form-control" id="validationServer06" style='padding:0' required>
+            <option value="" disabled selected>Veuillez sélectionner une Offre</option>
+            <option value="mensuel">Pass Mensuel (4,99€)</option>
+            <option value="annuel">Pass Annuel (19,99€)</option>
           </select>
         </div>
         <div class="form-group">
@@ -328,7 +325,7 @@
       <!--Grid row-->
       <div class="row">
         <!--Grid column-->
-        <section class="col-lg-6 col-md-12 mb-4 mb-md-0 footer-col">
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0 footer-col">
           <a href="index.html"><img src="assets/logo/logo-Lumin3ux-bg-light.png" id="lumin3ux-logo"
               alt="lumin3ux-logo"></a>
           <p>
@@ -340,7 +337,7 @@
           </p>
           <a href="https://www.paris.fr/" target="_blank"><img src="assets/pics/ville_paris.png" id="paris-logo"
               alt="paris-art-logo"></a>
-        </section>
+        </div>
         <!--Grid column-->
 
         <!--Grid column-->
@@ -398,16 +395,17 @@
           </ul>
           <p>—</p>
           <ul class="list-unstyled mb-0">
-            <li> <a href="https://facebook.com" target="_blank" class="as-fab-a"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://instagram.com" target="_blank" class="as-fab-a"><i class="fab fa-instagram"></i></a>
-              <a href="https://twitter.com" target="_blank" class="as-fab-a"><i class="fab fa-twitter"></i></a>
+            <li> <a href="https://facebook.com/" target="_blank" class="as-fab-a"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://instagram.com/" target="_blank" class="as-fab-a"><i class="fab fa-instagram"></i></a>
+              <a href="https://twitter.com/" target="_blank" class="as-fab-a"><i class="fab fa-twitter"></i></a>
             </li>
           </ul>
+        </section>
       </div>
       <!--Grid column-->
     </div>
     <!--Grid row-->
-    </section>
+    
     <!-- Grid container -->
 
     <!-- Copyright -->
@@ -418,19 +416,6 @@
     <!-- Copyright -->
   </footer>
 
-
-  <!-- COMMENT INSERER LE NO-FOLLOW (SEO)
-                  <h3>Titres H3</h3>
-                  <ul>
-                      <li><a href="https://www.numerama.com/" rel="nofollow">Numerama</a></li>
-                      <li><a href="http://www.clubic.com/" rel="nofollow">Clubic</a></li>
-                      <li><a href="https://www.futura-sciences.com" rel="nofollow">Futura-science</a></li>
-                  </ul>
-                  <address>
-                      Pierre SERIN
-                      <a href="mailto:pierre.serin@univ-valenciennes.fr" rel="nofollow">Contactez-moi !</a>
-                  </address> 
-              -->
 
   <!-- JAVASCRIPT Intégration -->
 
