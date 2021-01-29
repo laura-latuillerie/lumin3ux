@@ -27,6 +27,12 @@ CSS COMMUN
     font-style: normal;
 }
 
+@font-face {
+    font-family: "muli-black";
+    src: url(../assets/fonts/muli/Muli-Black.ttf);
+    font-style: bold;  
+}
+
 body{
     font-family: "muli";
     text-align: center;
@@ -201,7 +207,8 @@ BANDE-VIDEO
 }
 
 .overlay-text{
-    font-size : 1.8rem;
+    padding-left : 50px;
+    padding-right : 50px;
     text-shadow : 5px 5px 1px var(--color--brique);
     color : white;
 }
@@ -559,7 +566,9 @@ NEWSLETTER
     background-color: var(--color--second);
 }
 
-/* RGPD */
+/**********************************
+RGPD
+**********************************/
 
 #popup-rgpd{
     display: none;
@@ -738,9 +747,9 @@ PAGE PROGRAMMATION /// BANDE-EN COURS
     margin-top : 40px;
 }
 
-/**********************************
+/************************************
 PAGE LUMIN-PASS /// BANDE-LUMIN-PASS
-**********************************/
+************************************/
 
 .img-lumin-pass{
     margin : 20px auto 20px auto;
@@ -775,7 +784,7 @@ PAGE LUMIN-PASS /// BANDE-LUMIN-PASS
     animation : glitch1 2.5s alternate;
 }
 
-.bande-luminpass, .formulaire{
+.formulaire{
     margin-bottom : 100px;
 }
 
@@ -797,6 +806,7 @@ input{
     border: none;
     border-bottom : 2px solid var(--color--yellow);
 }
+
 /**********************************
 PAGE INFOS
 ***********************************/
@@ -812,13 +822,10 @@ figure{
 
 figcaption{
     max-width : 130px;
-    background-color : var(--color--brique);
-    color : white;
+    color : var(--color--brique);
     padding : 10px;
     margin-top : 20px;
     font-size : 1rem;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.173);
 }
 
 .icon-service{
@@ -843,7 +850,7 @@ figcaption{
 PAGE LEGALE
 **********************************/
 
-.bande-mentions-legales{
+.bande-credits{
     margin-bottom : 100px;
 }
 
@@ -899,6 +906,12 @@ footer a:hover{
 MEDIA RESP
 **********************************/
 
+@media screen and (min-width:360px) and (max-width:560px){
+    .mob-text-slide{
+        font-size : 0.9rem;
+    }
+}
+
 @media screen and (min-width:768px) and (max-width:1200px){
     .overlay-text{
         font-size : 2.5rem;
@@ -909,6 +922,12 @@ MEDIA RESP
     .overlay-text{
         font-size : 4rem;
     } 
+}
+    @media screen and (min-width:1600px){
+        .overlay-text{
+            font-size : 5rem;
+        }
+
 }
 
 @media screen and (min-width:768px){
@@ -928,13 +947,13 @@ MEDIA RESP
     }
 
     .video-container{
-        width : 100%;
+        width: 100%;
         height : 80%;
         z-index: 0;
     }
     #myVideo{
         width : 100%;
-        height : 60%;
+        height : 80%;
     }
 
     .overlay-text{
@@ -1037,6 +1056,10 @@ MEDIA RESP
         margin-top : 200px;
     }
 
+    .bande-programmation-passee{
+        margin-bottom : 100px;
+    }
+
     .bande-prog, .bande-services, .photo-artiste-scene, .bande-mentions-legales{
         margin-top : 150px;
     }
@@ -1050,16 +1073,16 @@ MEDIA RESP
         display:block;
 }
 
-.block-concept{
-    flex-basis : 50%;
-}
-.text-block-vert, .text-block-bleu, .text-block-yellow, .text-block-brique{
-    padding : 50px;
-}
+    .block-concept{
+        flex-basis : 50%;
+    }
+    .text-block-vert, .text-block-bleu, .text-block-yellow, .text-block-brique{
+        padding : 50px;
+    }
 
-figcaption{
-    max-width : 180px;
+    figcaption{
+        max-width : 180px;
 
-}
+    }
 
 }
