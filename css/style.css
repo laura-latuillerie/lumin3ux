@@ -45,63 +45,6 @@ h1{
     animation: glitch1 2.5s infinite;
 }
 
-
-
-@keyframes glitch1 {
-    0% {
-      transform: none;
-      opacity: 1;
-    }
-    7% {
-      transform: skew(-0.5deg, -0.9deg);
-      opacity: 0.75;
-    }
-    10% {
-      transform: none;
-      opacity: 1;
-    }
-    27% {
-      transform: none;
-      opacity: 1;
-    }
-    30% {
-      transform: skew(0.8deg, -0.1deg);
-      opacity: 0.75;
-    }
-    35% {
-      transform: none;
-      opacity: 1;
-    }
-    52% {
-      transform: none;
-      opacity: 1;
-    }
-    55% {
-      transform: skew(-1deg, 0.2deg);
-      opacity: 0.75;
-    }
-    50% {
-      transform: none;
-      opacity: 1;
-    }
-    72% {
-      transform: none;
-      opacity: 1;
-    }
-    75% {
-      transform: skew(0.4deg, 1deg);
-      opacity: 0.75;
-    }
-    80% {
-      transform: none;
-      opacity: 1;
-    }
-    100% {
-      transform: none;
-      opacity: 1;
-    }
-  }
-
 h2{
     font-size : 1.2rem;
     margin : 0 0 20px 0;
@@ -387,6 +330,10 @@ BANDE-PRESSE
 .brand{
     max-height : 40px;
     max-width: 100px;
+}
+
+.presse-web{
+    display:none;
 }
 
 
@@ -675,14 +622,9 @@ PAGE A PROPOS /// BANDE-CONCEPT
     box-shadow: 10px 10px 0px 1px var(--color--second);
 }
 
-.presentation-pop-up, .presentation-exposition, .presentation-scene, .presentation-cafe{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
 
 .block-concept{
+    flex-basis : 100%;
     display : flex;
     align-items: center;
     justify-content: center;
@@ -691,55 +633,59 @@ PAGE A PROPOS /// BANDE-CONCEPT
 }
 
 .colored-block-vert{
-    flex-basis : 49%;
-    background-color: var(--color--vert);
-    color : var(--color--off-white);
+    background-image : url('../assets/pics/pop-up-img.jpg');
+    background-size: cover;
+    background-position: center;
+    color : white;
+    text-shadow: 5px 5px 0px var(--color--vert);
 }
 
 .text-block-vert{
-    flex-basis : 50%;
-    padding-top : 20px;
-    font-size : 1.2rem;
+    padding: 20px;
+    font-size : 1rem;
     color : var(--color--vert);
 }
 
 .colored-block-bleu{
-    flex-basis : 49%;
-    background-color: var(--color--bleu);
-    color : var(--color--off-white);
+    background-image : url('../assets/pics/exposition-img.jpg');
+    background-size: cover;
+    background-position: center;
+    color : white;
+    text-shadow: 5px 5px 0px var(--color--bleu);
 }
 
 .text-block-bleu{
-    flex-basis : 50%;
-    padding-top : 20px;
-    font-size : 1.2rem;
+    padding: 20px;
+    font-size : 1rem;
     color : var(--color--bleu);
 }
 
 .colored-block-yellow{
-    flex-basis : 49%;
-    background-color: var(--color--yellow);
-    color : var(--color--off-white);
+    background-image : url('../assets/pics/scene-libre-img.jpg');
+    background-size: cover;
+    background-position: center;
+    color : white;
+    text-shadow: 5px 5px 0px var(--color--yellow);
 }
 
 .text-block-yellow{
-    flex-basis : 50%;
-    padding-top : 20px;
-    font-size : 1.2rem;
+    padding: 20px;
+    font-size : 1rem;
     color : var(--color--yellow);
     text-shadow : 1px 1px 1px #4431001c;
 }
 
 .colored-block-brique{
-    flex-basis : 49%;
-    background-color: var(--color--brique);
-    color : var(--color--off-white);
+    background-image : url('../assets/pics/cafe-img.jpg');
+    background-size: cover;
+    background-position: center;
+    color : white;
+    text-shadow: 5px 5px 0px var(--color--brique);
 }
 
 .text-block-brique{
-    flex-basis : 50%;
-    padding-top : 20px;
-    font-size : 1.2rem;
+    padding: 20px;
+    font-size : 1rem;
     color : var(--color--brique);
 }
 
@@ -750,7 +696,7 @@ PAGE A PROPOS /// BANDE-CONCEPT
 }
 
 /**********************************
-PAGE A PROPOS /// BANDE-EQUIPE-MOB
+PAGE A PROPOS /// BANDE-EQUIPE
 **********************************/
 
 .photo-equipe{
@@ -805,24 +751,93 @@ PAGE LUMIN-PASS /// BANDE-LUMIN-PASS
     margin: 40px 0 40px 0;
 }
 
-.list-group-item{
-    margin-bottom : 10px;
+.luminpass-description{
+    margin-bottom : 40px;
     font-size : 1.4rem;
-    color : white;
-    background: var(--color--second);
 }
 
 .item-avantages{
-    margin-bottom : 10px;
+    display : flex;
+    align-items: center;
+    justify-content :space-evenly;
+    flex-direction: column;
+    padding : 20px;
+    height : 300px;
     font-size : 1.4rem;
     color : white;
     background: var(--color--vert);
+    border : 20px solid var(--color--off-white);
+    border-radius: 10%;
 }
 
-.bande-luminpass{
+.item-avantages:hover{
+    background: var(--color--bleu);
+    animation : glitch1 2.5s alternate;
+}
+
+.bande-luminpass, .formulaire{
     margin-bottom : 100px;
 }
 
+.suscribe-form{
+    text-align: left;
+    background-color : rgba(0, 0, 0, 0.050);
+    padding : 20px;
+    border : none;
+    border-radius : 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.187);
+}
+input{
+    border-radius : 10px;
+}
+
+.form-control{
+    color : var(--color--off-black);
+    background-color: rgba(255, 255, 255, 0.221);
+    border: none;
+    border-bottom : 2px solid var(--color--yellow);
+}
+/**********************************
+PAGE INFOS
+***********************************/
+
+.bande-services, .infos-bande-carte, .bande-contact, .bande-faq{
+    margin-bottom : 100px;
+}
+
+figure{
+    max-width : 90%;
+    margin : 30px auto 30px auto;
+}
+
+figcaption{
+    max-width : 130px;
+    background-color : var(--color--brique);
+    color : white;
+    padding : 10px;
+    margin-top : 20px;
+    font-size : 1rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.173);
+}
+
+.icon-service{
+    border-radius: 50%;
+    overflow : hidden;
+    animation: float 3s ease-in-out infinite;
+}
+
+.section-faq{
+    padding : 20px;
+}
+
+.faq-link{
+    color : var(--color--brique);
+}
+
+.faq-link:hover{
+    color : var(--color--brique);
+}
 
 /**********************************
 PAGE LEGALE
@@ -998,13 +1013,8 @@ MEDIA RESP
         max-height : 50px;
         width : 700px;
     }
-
-    .photo-artiste-scene{
-        margin-top: 150px;
-    }
-
     .very-big{
-        font-size : 3rem;
+        font-size : 2.6rem;
     }
 
     .bande-equipe-mob{
@@ -1019,15 +1029,15 @@ MEDIA RESP
         max-width: 40%;
     }
 
+    .web-team{
+        padding: 0 30px 0 30px;
+    }
+
     .bande-programmation-en-cours{
         margin-top : 200px;
     }
 
-    .bande-prog{
-        margin-top : 150px;
-    }
-
-    .bande-mentions-legales{
+    .bande-prog, .bande-services, .photo-artiste-scene, .bande-mentions-legales{
         margin-top : 150px;
     }
 
@@ -1036,5 +1046,20 @@ MEDIA RESP
         max-width: 60%;
     }
 
+    .presse-web{
+        display:block;
 }
 
+.block-concept{
+    flex-basis : 50%;
+}
+.text-block-vert, .text-block-bleu, .text-block-yellow, .text-block-brique{
+    padding : 50px;
+}
+
+figcaption{
+    max-width : 180px;
+
+}
+
+}
